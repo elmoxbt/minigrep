@@ -1,0 +1,17 @@
+Hello, world!
+
+This is a simple test file.
+It contains some basic text for testing.
+
+Rust is a programming language.
+It is fast and safe.
+Many developers love Rust.
+
+The quick brown fox jumps over the lazy dog.
+This sentence contains every letter of the alphabet.
+
+Numbers: 1 2 3 4 5
+Colors: red blue green yellow
+Animals: cat dog bird fish
+
+End of file.
