@@ -1,37 +1,37 @@
-# Minigrep
+# rust-cli
 
 A lightweight, fast command-line search tool written in **Rust**, inspired by `grep`.  
 Searches for a query string in files and prints matching lines with optional case-insensitive mode.
 
 ## Features
-- Search patterns in one or more files  
-- Case-insensitive matching via `--ignore-case`  
+- Search patterns in files  
+- Case-insensitive matching via `CASE_INSENSITIVE` environment variable  
 - Clean error messages for invalid files or inputs    
-- Zero-cost abstractions thanks to Rust’s ownership system  
+- Zero-cost abstractions thanks to Rust's ownership system
 
 ## Installation
 
 ```bash
-git clone https://github.com/elmoxbt/minigrep.git
-cd minigrep
+cd rust-cli
 cargo build --release
 ```
 ## Usage
-./target/release/minigrep <QUERY> <FILE> [--ignore-case]
+./target/release/rust-cli <QUERY> <FILE>
 
 ### Example
-#### Basic search
-./target/release/minigrep "rust" poem.txt
+#### Basic search (case-sensitive)
+./target/release/rust-cli "rust" poem.txt
 
 #### Case-insensitive search
-./target/release/minigrep "Rust" poem.txt --ignore-case
+CASE_INSENSITIVE=1 ./target/release/rust-cli "Rust" poem.txt
 
 ## Project Structure
 
-minigrep/
-├── Cargo.toml      # Dependencies: clap, env_logger
+rust-cli/
+├── Cargo.toml      # No dependencies
 ├── src/
-│   └── main.rs     # CLI parsing, file I/O, search logic
+│   ├── main.rs     # Entry point
+│   └── lib.rs      # Config, search logic, file I/O
 └── README.md
 
 ## Build and Test
