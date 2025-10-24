@@ -6,8 +6,7 @@ Searches for a query string in files and prints matching lines with optional cas
 ## Features
 - Search patterns in one or more files  
 - Case-insensitive matching via `--ignore-case`  
-- Clean error messages for invalid files or inputs  
-- Built with `clap` for intuitive CLI argument parsing  
+- Clean error messages for invalid files or inputs    
 - Zero-cost abstractions thanks to Rust’s ownership system  
 
 ## Installation
